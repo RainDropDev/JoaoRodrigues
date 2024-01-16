@@ -1,0 +1,163 @@
+body{
+    margin: 0%;
+    background-color: rgba(201, 198, 193, 0.858);
+}
+
+#menu{
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: 0px 4px 5px rgba(245, 222, 179, 0.508);
+    padding: 14px 5px;
+    align-items: center;
+    margin: 15px;
+    float: left;
+    color: wheat;
+    background-color: rgba(62, 62, 62,0);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.barra_nav{
+    box-shadow: black 0px 10px 10px;
+    list-style-type: none;
+    padding: 19px 0px;
+    margin: 0px;
+    background-color: rgb(19, 33, 112);
+    overflow: hidden;
+    animation-name: barra;
+    animation-duration: 1s;
+}
+@keyframes barra{
+    from{background-color: rgba(19, 64, 112, 0.847);}
+    to{background-color: rgb(19, 33, 112);}
+}
+.barra_nav a{
+    text-shadow: 0px 5px 4px rgba(245, 222, 179, 0.316);
+    align-items: center;
+    text-decoration: none;
+    color: wheat;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    font-size: 25px;
+}
+.barra_nav a:hover{
+    color: wheat;
+    background-color:  rgba(131, 138, 138,0);
+    text-shadow: 0px 5px 5px rgba(245, 222, 179, 0.789);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    animation-name: linha;
+    animation-duration: 0.1s;
+    text-decoration-thickness:3px;
+}
+@keyframes linha{
+    from{text-decoration-thickness:0px;}
+    to{text-decoration-thickness:3px;}
+}
+
+.barra_nav li{
+    float: left;
+}
+h3{
+    color:rgb(104, 58, 255);
+}
+
+ul{
+    list-style: none;
+}
+#lista{
+    list-style: none;
+}
+#lista li::before {
+    content: "\2022";
+    color: rgb(104, 58, 255);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+.mobile-menu {
+    cursor: pointer;
+    float: right;
+    margin: 15px;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 3px;
+    background: wheat;
+    margin: 7px;
+    display: none;
+    z-index: 2;
+}
+#hamburguer{
+    display: none;
+}
+@media(max-width:600px){
+    .mobile-menu div{
+        display: block;
+    }
+    .barra_nav li{
+
+        float: none;
+        box-sizing: border-box;
+        display: block;
+        animation: palavras;
+        animation-duration: 4s;
+    }
+    .nav-list{
+        position: absolute;
+        background-color: rgb(19, 33, 112);
+        width: 100%;
+        top: 18.3vh;
+        border: 0;
+        border-bottom: 10px rgb(104, 58, 255);
+        border-style:solid;
+        animation: barra;
+        animation-duration: 1s;
+        height: 65%;
+    }
+    .nav-list{ display: none;}
+    .barra_nav input:checked ~ .nav-list{display: block;}
+    .barra_nav input:checked ~ .mobile-menu div{
+        margin: 10px;
+        animation: hamburguer;
+        animation-duration: 0.3s;
+    }
+    @keyframes hamburguer{
+        from{margin: 7px;}
+        to{margin: 10px;}
+    }
+    @keyframes barra {
+        from{height: 0%;}
+        to{height: 65%;}
+    }
+    @keyframes palavras {
+        from{opacity: 0;}
+        to{opacity:1;}
+    }
+    
+}
+.footer{
+    padding: 0;
+    margin: 0;
+    background-color:rgb(104, 58, 255);
+    text-align: center;
+    color:wheat;
+    text-shadow: 0px 4px 3px rgba(245, 222, 179, 0.508);
+}
+.nav-list.active{
+    transform: translateX(0);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
