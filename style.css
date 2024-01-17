@@ -74,10 +74,15 @@ h2{
 }
 .banner{
     box-shadow: rgb(104, 58, 255) 0px 10px;
-    padding: 350px;
-    background-size: cover;
+    
     background-repeat: no-repeat;
-    background-image: url(imagem.png);
+    background: url(imagens/imagem.jpeg) ;
+    overflow: hidden;
+    object-fit: cover;
+    height: 600px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 main{
     border: 20px;
@@ -200,13 +205,13 @@ h3{
         position: absolute;
         background-color: rgb(19, 33, 112);
         width: 100%;
-        top: 18.3vh;
+        top: 100px;
         border: 0;
         border-bottom: 10px rgba(19, 64, 112, 0.847);
         border-style:solid;
         animation: barra;
         animation-duration: 1s;
-        height: 65%;
+        height: 400px;
     }
     .nav-list{ display: none;}
     .barra_nav input:checked ~ .nav-list{display: block;}
@@ -220,8 +225,8 @@ h3{
         to{margin: 10px;}
     }
     @keyframes barra {
-        from{height: 0%;}
-        to{height: 65%;}
+        from{height: 0px;}
+        to{height: 400px;}
     }
     @keyframes palavras {
         from{opacity: 0;}
