@@ -2,7 +2,11 @@ body{
     margin: 0%;
     background-color: rgba(201, 198, 193, 0.858);
 }
-
+main p{
+    margin: 5%;
+    text-align: justify;
+    padding: 2px;
+}
 #menu{
     text-decoration: none;
     font-size: 2rem;
@@ -117,7 +121,7 @@ ul{
         border-style:solid;
         animation: barra;
         animation-duration: 1s;
-        height: 65%;
+        height: 490px;
     }
     .nav-list{ display: none;}
     .barra_nav input:checked ~ .nav-list{display: block;}
@@ -132,7 +136,7 @@ ul{
     }
     @keyframes barra {
         from{height: 0%;}
-        to{height: 65%;}
+        to{height:490px;}
     }
     @keyframes palavras {
         from{opacity: 0;}

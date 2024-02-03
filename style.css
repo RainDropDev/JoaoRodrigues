@@ -130,7 +130,6 @@ main h2{
     to{bottom:5px;};
 }
 #Cordeis{
-    
     overflow: auto;
     display: inline-block;
     width: 100%;
@@ -211,7 +210,7 @@ h3{
         border-style:solid;
         animation: barra;
         animation-duration: 1s;
-        height: 400px;
+        height: 490px;
     }
     .nav-list{ display: none;}
     .barra_nav input:checked ~ .nav-list{display: block;}
@@ -226,7 +225,7 @@ h3{
     }
     @keyframes barra {
         from{height: 0px;}
-        to{height: 400px;}
+        to{height: 490px;}
     }
     @keyframes palavras {
         from{opacity: 0;}
