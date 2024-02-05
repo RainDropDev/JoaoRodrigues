@@ -78,8 +78,8 @@ body{
 h2{
     margin:3%;
 }
-main p{
-    margin: 5%;
+.info p{
+    margin: 2.4%;
     text-align: justify;
 }
 
