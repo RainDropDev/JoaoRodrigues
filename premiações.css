@@ -2,7 +2,7 @@ body{
     margin: 0%;
     background-color: rgba(201, 198, 193, 0.858);
 }
-main p{
+#Texto{
     margin: 5%;
     text-align: justify;
     padding: 2px;
